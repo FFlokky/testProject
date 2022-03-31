@@ -1,0 +1,536 @@
+header
+	position: relative
+
+nav
+	min-height: 45px
+	background-color: #212121
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 2
+	position: relative
+
+.hamburger
+	display: none
+	position: absolute
+	right: 10px
+	top: 50%
+	transform: translateY(-50%)
+	width: 20px
+	height: 12px
+	span
+		display: block
+		width: 100%
+		height: 2px
+		background-color: white
+		margin-bottom: 2px
+		transition: 0.5s all
+	&_active
+		span
+			margin-bottom: -2px
+			&:nth-child(1)
+				transform: translateY(3px) rotate(-45deg)
+			&:nth-child(3)
+				transform: translateY(3px) rotate(45deg)
+			&:nth-child(2)
+				display: none
+				
+				
+				
+
+
+
+.menu
+	display: flex
+	justify-content: space-around
+	margin: 0
+	
+	// padding: 12px 0 12px 0
+	list-style: none
+
+nav
+	padding: 0 71px 0 71px
+	margin: 0
+
+.menu
+	.menu_link
+		color: #ffffff
+		font-size: 15px
+		font-weight: 300
+		font-style: normal
+		letter-spacing: normal
+		line-height: 45px
+		text-align: center
+		text-decoration: none
+
+.menu_item
+	display: block
+	border-right: 2px dotted black
+	padding: 0px 34px 0px 0px
+	margin: 10px 0 10px 0
+	cursor: pointer
+	
+
+	&:last-child
+		border: none
+
+
+.subheader
+	min-height: 84px
+	width: 100%
+	background-color: rgba(0, 0, 0, 0.6)
+	position: absolute
+	z-index: 1
+
+	.logo_img
+		display: block
+
+	img
+		margin-top: 16px
+		color: #ffffff
+		font-size: 26px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		text-align: left
+		text-transform: uppercase
+
+	.subheader_text
+		margin-top: 6px
+		opacity: 0.5
+		color: #ffffff
+		font-size: 13px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		text-align: left
+
+	.call_header
+		margin-top: 23px
+		color: #ffffff
+		font-size: 12px
+		font-weight: 300
+		font-style: normal
+		letter-spacing: normal
+		text-align: right
+
+	.phone_link
+		display: block
+		color: #ffffff
+		font-size: 22px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		text-transform: uppercase
+		text-align: right
+		text-decoration: none
+
+	.order_btn
+		margin-top: 19px
+		width: 172px
+		height: 46px
+		border: none
+		border-radius: 5px
+		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+		color: #ffffff
+		font-size: 14px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		text-align: center
+		text-transform: uppercase
+	.xs_visible
+		display: none
+
+/* info_section
+
+.info_section
+	background-image: url(../img/bg_img.jpg)  
+	min-height: 800px
+
+	.info_header
+		margin: 0
+		margin-top: 150px
+		color: #ffffff
+		font-size: 60px
+		font-weight: 700
+		font-style: normal
+		text-align: center
+
+	.info_subheader
+		margin: 0
+		margin-top: 5px
+		color: #ffffff
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		text-align: center
+
+.promo_text
+	margin: 0
+	margin-top: 23px
+	color: #ffffff
+	font-size: 17px
+	font-weight: 300
+	font-style: normal
+	letter-spacing: normal
+	line-height: 24px
+	text-align: center
+
+.send_app_btn
+	display: block
+	margin: 0 auto
+	margin-top: 118px
+	width: 259px
+	height: 63px
+	box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
+	border: none
+	border-radius: 5px
+	background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+	color: #ffffff
+	font-size: 18px
+	font-weight: 400
+	font-style: normal
+	letter-spacing: normal
+	text-align: center
+	text-transform: uppercase
+
+/* occasion_section
+
+.occasion_section
+	min-height: 900px
+	background-color: white
+	padding: 71px 0 80px 0
+
+	.occ_item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 40px
+
+	.occ_img
+		margin-right: 26px
+		display: block
+		display: flex
+		justify-content: center
+		align-items: center
+		min-width: 113px
+		height: 113px
+		background-color: #1eacc7
+		border-radius: 100%
+
+.occ_text
+	.title
+		color: #1eacc7
+		font-size: 17px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		line-height: normal
+		color: #202020
+		font-size: 15px
+		font-weight: 300
+		font-style: normal
+		letter-spacing: normal
+		line-height: 21px
+.sub_par
+	margin: 0 auto
+	padding: 5px 11px 6px 12px
+	text-align: center
+	width: 112px
+	height: 24px
+	background-color: #000000
+	color: #ffffff
+	font-size: 11px
+	font-weight: 300
+	font-style: normal
+	text-align: center
+	vertical-align: center
+	text-transform: uppercase
+.lebel
+	margin-top: 38px
+	color: #222222
+	font-size: 38px
+	font-weight: 700
+	font-style: normal
+	letter-spacing: normal
+	text-align: center
+	text-transform: uppercase
+.subheader_link
+	color: #222222
+	font-size: 17px
+	font-weight: 400
+	font-style: normal
+	letter-spacing: normal
+	text-align: center
+// mobile
+
+.mobile
+	min-height: 864px
+	background: url('../img/mobile_bg.jpg')
+	padding: 48px 0 80px 0
+	.row
+		margin-top: 32px 
+	&_item
+		width: 320px
+		height: 280px
+		position: relative
+		margin-bottom: 19px
+		&_1
+			background: url('../icons/mobile_icon_1.png') center (center/cover) no-repeat 
+		&_2
+			background: url('../icons/mobile_icon_2.png') center (center/cover) no-repeat	
+		&_3
+			background: url('../icons/mobile_icon_3.png') center (center/cover) no-repeat
+		&_4
+			background: url('../icons/mobile_icon_4.png') center (center/cover) no-repeat	
+		&_5
+			background: url('../icons/mobile_icon_5.png') center (center/cover) no-repeat	
+		&_6
+			background: url('../icons/mobile_icon_6.png') center (center/cover) no-repeat	
+		&_subtitle
+			color: #ffffff
+			font-size: 24px
+			font-weight: 400
+			font-style: normal
+			letter-spacing: normal
+			text-align: center
+			padding-top: 90px
+			text-transform: uppercase
+		&_plus
+			position: absolute
+			display: flex
+			align-items: center
+			width: 26px
+			height: 26px
+			background-color: #000000
+			border-radius: 100%
+			padding-left: 6px
+			position: absolute
+			bottom: 41px
+			left: 50%
+			transform: translateX(-50%)
+			cursor: pointer
+			margin: 0 auto
+			&::before
+				display: block
+				content: ''
+				width: 14px
+				height: 2px
+				background-color: $first-color
+				transition: 0.3s all
+			&::after
+				display: block
+				content: ''
+				width: 2px
+				height: 14px
+				background-color: $first-color
+				position: relative
+				right: 50%
+				transform: translateX(100%)
+				transition: 0.3s all
+			&:hover
+				&::after, &::before
+					background-color: $second-color
+				
+// choice
+.choice
+	min-height: 896px
+	background: url('../img/car_bg.jpg') center (center/cover) no-repeat
+	padding: 57px 0 138px 0
+	.sub_par
+		margin: 0 auto
+		padding: 5px 11px 6px 12px
+		text-align: center
+		width: 112px
+		height: 24px
+		background-color: white
+		color: #070716
+		font-size: 11px
+		font-weight: 300
+		font-style: normal
+		text-align: center
+		vertical-align: center
+		text-transform: uppercase
+	.lebel
+		margin-top: 38px
+		color: #ffffff
+		font-size: 38px
+		font-weight: 700
+		font-style: normal
+		letter-spacing: normal
+		text-align: center
+		text-transform: uppercase
+	.subheader_link
+		color: #ffffff
+		font-size: 17px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		text-align: center
+	&_img
+		margin-top: 56px
+		img
+			display: block
+			margin: 0 auto
+	&_subheader
+		text-align: center
+		color: #222222
+		font-size: 17px
+		font-weight: 300
+		font-style: normal
+		letter-spacing: normal
+		line-height: 24px		
+// terms
+.terms
+	min-height: 767px
+	padding-top: 68px
+	.list_title_1
+		color: #1ca8c3
+		font-size: 22px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		line-height: normal
+	.list_title_2
+		color: #ff5656
+		font-size: 22px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		line-height: normal
+	.terms_list
+		list-style: none
+		margin-top: 20px
+		line-height: 24px
+		&_item
+			&:before 
+				content: url(../icons/mark.png)
+				padding-right: 11px
+				align-items: center
+				
+		&_item_1
+			&::before
+				content: url(../icons/mark_red.png)
+				padding-right: 11px
+				align-items: center
+	.fst_list
+		margin-top: 33px
+	.snd_list
+		margin-top: 62px
+	.list_subtitle
+		color: #1ca8c3
+		font-weight: 300
+		font-style: normal
+		letter-spacing: normal
+		line-height: normal
+// location
+.location
+	min-height: 717px
+	padding: 68px 0 49px 0
+	background: url('../img/map.jpg') center (center/cover) no-repeat
+	.sub_par
+		color: #070716
+		background-color: white       
+	.lebel
+		color: #ffffff
+	.subheader_link
+		color: #ffffff
+	.all_cities
+		display: flex
+		justify-content: center
+		color: #1fbad6
+		font-size: 15px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		text-align: center
+		text-transform: uppercase
+		text-decoration: none
+		margin-top: 486px
+footer
+	min-height: 142px
+	padding: 14px 0 0 0
+.footer_line
+	margin: 0 auto
+	width: 299px
+	height: 4px
+	background-color: #1fbad6
+.footer_contet > div
+	width: 33%
+	&:nth-child(3)
+		display: flex 
+		justify-content: flex-end	
+.footer_contet
+	display: flex
+	justify-content: space-between
+	margin-top: 32px
+	.social_network
+		display: flex
+		.network_icon
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 32px
+			height: 32px
+			background-color: #070716
+			margin-left: 12px
+			border-radius: 100%
+			color: white
+			i
+				color: white
+				transition: 0.3s all
+				&:hover
+					color: $first-color
+			
+			&:first-child
+				margin-left: 23px
+			
+	.bot_nav
+		width: 390px
+		margin: 0 auto
+		&_link
+			display: flex
+			justify-content: space-between
+			padding: 0 10px
+			a
+				color: #070716
+				font-size: 15px
+				font-weight: 300
+				text-transform: uppercase
+				text-decoration: none
+		&_sub
+			display: flex
+			justify-content: space-between
+			margin-top: 10px
+			a
+				color: #999999
+				font-size: 11px
+				font-weight: 300
+				text-transform: uppercase
+				text-decoration: none
+		&_langs
+			text-align: center
+			margin-top: 19px
+			a
+				text-decoration: none
+				color: #1fbad6
+				font-size: 11px
+				font-weight: 400
+				line-height: 68px
+				text-transform: uppercase
+	.services_link
+		display: flex
+		.network_btn
+			position: relative
+			width: 94px
+			height: 24px
+			border: none
+			border-radius: 4px
+			margin-right: 7px
+			cursor: pointer
+			&:last-child
+				margin-right: 24px
